@@ -17,7 +17,6 @@
     height: 600px;
     border-radius: 100%;
     background-image: linear-gradient(to bottom, #fb5dad,#55fb9f,#b97aff);
-    filter: drop-shadow(0 0 200px grey );
     animation: my-animation 1s linear infinite ;
 }
 .circle::before {
@@ -32,7 +31,6 @@
  margin: auto;
  border-radius: 100%;
  background:#050210;
-
 }
  .circle::after {
     content: '';
@@ -62,15 +60,28 @@
     0% {
         width: 0px;
         height: 0px;
+        filter: saturate(0%)
     }
     100% {
         width: 490px;
         height: 490px;
+        filter: saturate(100%)
     }
 
         
 }
-
+.bl {
+    position: absolute;
+    border: 2px solid white;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    margin: 30px auto;
+    background-image: linear-gradient(to bottom, #fb5dad,#55fb9f,#b97aff);
+    filter: blur(40px);
+    z-index: -1;
+    animation: my-animation 1s linear infinite ;
+}
 
     </style>
 </head>
@@ -78,6 +89,7 @@
 <div class="box">
 
 <div class="circle"></div>
+<div class="bl"></div>
  
 
 
